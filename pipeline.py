@@ -1,0 +1,17 @@
+from rag import ask
+from logger import log_request,show_all
+import time
+def answer_baseline(question):
+    start = time.perf_counter()
+    response = ask(question)
+    end = time.perf_counter()
+    elapsed_ms = (end-start) * 1000
+    answer = response.choices[0].message.content
+    cache_hit = 0
+    log_request(question,answer,response.model,cache_hit,response.usage.prompt_tokens,response.usage.completion_tokens,elapsed_ms)
+    return answer
+
+
+
+if __name__ == "__main__":
+    show_all()
