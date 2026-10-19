@@ -5,6 +5,7 @@ import os
 from dotenv import load_dotenv
 from pathlib import Path
 from openai import OpenAI
+from config import K,MAX_TOKENS
 
 load_dotenv()
 client = chromadb.PersistentClient(path="./data/")
@@ -42,8 +43,8 @@ def load_chunks(chunks):
         metadatas=[chunk.metadata for chunk in chunks],
     )
 
-def retrieve(question,k=3):
-    results = collection.query(query_texts=[question],n_results=k)
+def retrieve(question):
+    results = collection.query(query_texts=[question],n_results=K)
     return results["documents"][0]
 
 

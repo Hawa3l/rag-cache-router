@@ -1,0 +1,608 @@
+[
+  {
+    "id": "E01",
+    "question": "How many paid vacation days does a new employee get per year?",
+    "difficulty": "easy",
+    "type": "original",
+    "paraphrase_of": null,
+    "source": "handbook",
+    "page": [
+      0
+    ],
+    "key_fact": "20 days"
+  },
+  {
+    "id": "E02",
+    "question": "How many paid sick days do employees receive per calendar year?",
+    "difficulty": "easy",
+    "type": "original",
+    "paraphrase_of": null,
+    "source": "handbook",
+    "page": [
+      0
+    ],
+    "key_fact": "10 days"
+  },
+  {
+    "id": "E03",
+    "question": "What are the core working hours at Brightwave?",
+    "difficulty": "easy",
+    "type": "original",
+    "paraphrase_of": null,
+    "source": "handbook",
+    "page": [
+      0
+    ],
+    "key_fact": "10:00 to 15:00"
+  },
+  {
+    "id": "E04",
+    "question": "How many days per week can employees work remotely?",
+    "difficulty": "easy",
+    "type": "original",
+    "paraphrase_of": null,
+    "source": "handbook",
+    "page": [
+      0
+    ],
+    "key_fact": "3 days"
+  },
+  {
+    "id": "E05",
+    "question": "How long is parental leave for the primary caregiver?",
+    "difficulty": "easy",
+    "type": "original",
+    "paraphrase_of": null,
+    "source": "handbook",
+    "page": [
+      0
+    ],
+    "key_fact": "16 weeks"
+  },
+  {
+    "id": "E06",
+    "question": "What is the maximum daily meal reimbursement while traveling?",
+    "difficulty": "easy",
+    "type": "original",
+    "paraphrase_of": null,
+    "source": "handbook",
+    "page": [
+      0
+    ],
+    "key_fact": "$65"
+  },
+  {
+    "id": "E07",
+    "question": "How often must passwords be rotated?",
+    "difficulty": "easy",
+    "type": "original",
+    "paraphrase_of": null,
+    "source": "handbook",
+    "page": [
+      0
+    ],
+    "key_fact": "180 days"
+  },
+  {
+    "id": "E08",
+    "question": "How many hours do employees have to report a security incident?",
+    "difficulty": "easy",
+    "type": "original",
+    "paraphrase_of": null,
+    "source": "handbook",
+    "page": [
+      1
+    ],
+    "key_fact": "2 hours"
+  },
+  {
+    "id": "E09",
+    "question": "What is the annual learning budget per employee?",
+    "difficulty": "easy",
+    "type": "original",
+    "paraphrase_of": null,
+    "source": "handbook",
+    "page": [
+      0
+    ],
+    "key_fact": "$1,500"
+  },
+  {
+    "id": "E10",
+    "question": "How many schedule periods per day does the AuraTemp T200 support?",
+    "difficulty": "easy",
+    "type": "original",
+    "paraphrase_of": null,
+    "source": "manual",
+    "page": [
+      0
+    ],
+    "key_fact": "6"
+  },
+  {
+    "id": "E11",
+    "question": "What does error E04 mean on the T200?",
+    "difficulty": "easy",
+    "type": "original",
+    "paraphrase_of": null,
+    "source": "manual",
+    "page": [
+      1
+    ],
+    "key_fact": "Wi-Fi connection lost"
+  },
+  {
+    "id": "E12",
+    "question": "How long is the warranty on the AuraTemp T200?",
+    "difficulty": "easy",
+    "type": "original",
+    "paraphrase_of": null,
+    "source": "manual",
+    "page": [
+      0,
+      1
+    ],
+    "key_fact": "3 years"
+  },
+  {
+    "id": "E13",
+    "question": "What size is the T200 display?",
+    "difficulty": "easy",
+    "type": "original",
+    "paraphrase_of": null,
+    "source": "manual",
+    "page": [
+      0
+    ],
+    "key_fact": "3.5-inch"
+  },
+  {
+    "id": "E14",
+    "question": "How long does the T200 backup battery last?",
+    "difficulty": "easy",
+    "type": "original",
+    "paraphrase_of": null,
+    "source": "manual",
+    "page": [
+      0
+    ],
+    "key_fact": "8 hours"
+  },
+  {
+    "id": "E15",
+    "question": "How long should you hold the ring to factory reset the T200?",
+    "difficulty": "easy",
+    "type": "original",
+    "paraphrase_of": null,
+    "source": "manual",
+    "page": [
+      1
+    ],
+    "key_fact": "20 seconds"
+  },
+  {
+    "id": "E16",
+    "question": "Who is the CEO of Brightwave Technologies?",
+    "difficulty": "easy",
+    "type": "original",
+    "paraphrase_of": null,
+    "source": "report",
+    "page": [
+      0
+    ],
+    "key_fact": "Maria Okafor"
+  },
+  {
+    "id": "E17",
+    "question": "In what year was Brightwave founded, and where?",
+    "difficulty": "easy",
+    "type": "original",
+    "paraphrase_of": null,
+    "source": "report",
+    "page": [
+      0
+    ],
+    "key_fact": "2014, Austin"
+  },
+  {
+    "id": "E18",
+    "question": "What was Brightwave's revenue in 2025?",
+    "difficulty": "easy",
+    "type": "original",
+    "paraphrase_of": null,
+    "source": "report",
+    "page": [
+      0
+    ],
+    "key_fact": "$264 million"
+  },
+  {
+    "id": "E19",
+    "question": "What share of 2025 revenue came from North America?",
+    "difficulty": "easy",
+    "type": "original",
+    "paraphrase_of": null,
+    "source": "report",
+    "page": [
+      0
+    ],
+    "key_fact": "62%"
+  },
+  {
+    "id": "E20",
+    "question": "What revenue does management expect for 2026?",
+    "difficulty": "easy",
+    "type": "original",
+    "paraphrase_of": null,
+    "source": "report",
+    "page": [
+      1
+    ],
+    "key_fact": "$300-320 million"
+  },
+  {
+    "id": "H01",
+    "question": "How many vacation days would an employee in their sixth year get, and how many of the unused ones can they carry over?",
+    "difficulty": "hard",
+    "type": "original",
+    "paraphrase_of": null,
+    "source": "handbook",
+    "page": [
+      0
+    ],
+    "key_fact": "25 days; carry over 5 (expire Mar 31)"
+  },
+  {
+    "id": "H02",
+    "question": "I'm flying 7 hours for a business trip and staying in Tokyo. What class can I fly and what is my nightly hotel limit?",
+    "difficulty": "hard",
+    "type": "original",
+    "paraphrase_of": null,
+    "source": "handbook",
+    "page": [
+      0
+    ],
+    "key_fact": "premium economy; $260/night"
+  },
+  {
+    "id": "H03",
+    "question": "An employee gets a 4 in June and a 5 in December. Are they eligible for promotion, and what else is needed?",
+    "difficulty": "hard",
+    "type": "original",
+    "paraphrase_of": null,
+    "source": "handbook",
+    "page": [
+      1
+    ],
+    "key_fact": "yes; plus manager's written recommendation"
+  },
+  {
+    "id": "H04",
+    "question": "If I leave the company 8 months after a $900 course was reimbursed, do I owe anything?",
+    "difficulty": "hard",
+    "type": "original",
+    "paraphrase_of": null,
+    "source": "handbook",
+    "page": [
+      0
+    ],
+    "key_fact": "yes; pro-rated repayment"
+  },
+  {
+    "id": "H05",
+    "question": "Can I store customer data on my own USB drive if I encrypt it?",
+    "difficulty": "hard",
+    "type": "original",
+    "paraphrase_of": null,
+    "source": "handbook",
+    "page": [
+      1
+    ],
+    "key_fact": "no; prohibited"
+  },
+  {
+    "id": "H06",
+    "question": "My T200 shows error E12 and I have no C-wire. What should I do?",
+    "difficulty": "hard",
+    "type": "original",
+    "paraphrase_of": null,
+    "source": "manual",
+    "page": [
+      0,
+      1
+    ],
+    "key_fact": "missing C-wire; use adapter on R and Y"
+  },
+  {
+    "id": "H07",
+    "question": "How many degrees warmer is the T200 set in Away mode in summer compared with the default daytime Comfort temperature?",
+    "difficulty": "hard",
+    "type": "original",
+    "paraphrase_of": null,
+    "source": "manual",
+    "page": [
+      0
+    ],
+    "key_fact": "10 degrees (82F vs 72F)"
+  },
+  {
+    "id": "H08",
+    "question": "My T200 was damaged by a power surge. Is it covered by the warranty?",
+    "difficulty": "hard",
+    "type": "original",
+    "paraphrase_of": null,
+    "source": "manual",
+    "page": [
+      1
+    ],
+    "key_fact": "no; surges not covered"
+  },
+  {
+    "id": "H09",
+    "question": "Why can't my T200 connect to my 5 GHz network, and is any product planned to fix that?",
+    "difficulty": "hard",
+    "type": "original",
+    "paraphrase_of": null,
+    "source": "manual+report",
+    "page": [
+      0,
+      0
+    ],
+    "key_fact": "T200 is 2.4 GHz only; T300 adds 5 GHz"
+  },
+  {
+    "id": "H10",
+    "question": "What was Brightwave's operating margin in 2024 versus 2025?",
+    "difficulty": "hard",
+    "type": "original",
+    "paraphrase_of": null,
+    "source": "report",
+    "page": [
+      0
+    ],
+    "key_fact": "6.6% -> 11.0%"
+  },
+  {
+    "id": "H11",
+    "question": "Roughly how much revenue came from Europe in 2025, in dollars?",
+    "difficulty": "hard",
+    "type": "original",
+    "paraphrase_of": null,
+    "source": "report",
+    "page": [
+      0
+    ],
+    "key_fact": "~$66 million"
+  },
+  {
+    "id": "H12",
+    "question": "What share of 2025 revenue came from the T200, and what was revenue excluding it?",
+    "difficulty": "hard",
+    "type": "original",
+    "paraphrase_of": null,
+    "source": "report",
+    "page": [
+      0
+    ],
+    "key_fact": "~22%; ~$206 million"
+  },
+  {
+    "id": "H13",
+    "question": "By how many percentage points does support satisfaction need to rise to hit the 2026 target?",
+    "difficulty": "hard",
+    "type": "original",
+    "paraphrase_of": null,
+    "source": "report",
+    "page": [
+      1
+    ],
+    "key_fact": "3 points (91% -> 94%)"
+  },
+  {
+    "id": "H14",
+    "question": "Which Brightwave product feature relates to the 9 patents filed in 2025, and what does that feature claim to save?",
+    "difficulty": "hard",
+    "type": "original",
+    "paraphrase_of": null,
+    "source": "manual+report",
+    "page": [
+      0,
+      0
+    ],
+    "key_fact": "Eco mode scheduling; ~12% savings"
+  },
+  {
+    "id": "H15",
+    "question": "How did revenue per employee change between 2024 and 2025?",
+    "difficulty": "hard",
+    "type": "original",
+    "paraphrase_of": null,
+    "source": "report",
+    "page": [
+      0
+    ],
+    "key_fact": "$299k -> $314k (~+5%)"
+  },
+  {
+    "id": "P01",
+    "question": "What's the PTO allowance for someone just starting at the company?",
+    "difficulty": "easy",
+    "type": "paraphrase",
+    "paraphrase_of": "E01",
+    "source": "handbook",
+    "page": [
+      0
+    ],
+    "key_fact": "20 days"
+  },
+  {
+    "id": "P02",
+    "question": "Per year, how many days of paid sick leave do I get?",
+    "difficulty": "easy",
+    "type": "paraphrase",
+    "paraphrase_of": "E02",
+    "source": "handbook",
+    "page": [
+      0
+    ],
+    "key_fact": "10 days"
+  },
+  {
+    "id": "P03",
+    "question": "During which hours do employees need to be reachable?",
+    "difficulty": "easy",
+    "type": "paraphrase",
+    "paraphrase_of": "E03",
+    "source": "handbook",
+    "page": [
+      0
+    ],
+    "key_fact": "10:00 to 15:00"
+  },
+  {
+    "id": "P04",
+    "question": "How many weeks off does the main caregiver get when a baby arrives?",
+    "difficulty": "easy",
+    "type": "paraphrase",
+    "paraphrase_of": "E05",
+    "source": "handbook",
+    "page": [
+      0
+    ],
+    "key_fact": "16 weeks"
+  },
+  {
+    "id": "P05",
+    "question": "How frequently do I have to change my password?",
+    "difficulty": "easy",
+    "type": "paraphrase",
+    "paraphrase_of": "E07",
+    "source": "handbook",
+    "page": [
+      0
+    ],
+    "key_fact": "180 days"
+  },
+  {
+    "id": "P06",
+    "question": "After finding a security problem, how quickly must I report it?",
+    "difficulty": "easy",
+    "type": "paraphrase",
+    "paraphrase_of": "E08",
+    "source": "handbook",
+    "page": [
+      1
+    ],
+    "key_fact": "2 hours"
+  },
+  {
+    "id": "P07",
+    "question": "My thermostat is showing E04, what's going on?",
+    "difficulty": "easy",
+    "type": "paraphrase",
+    "paraphrase_of": "E11",
+    "source": "manual",
+    "page": [
+      1
+    ],
+    "key_fact": "Wi-Fi connection lost"
+  },
+  {
+    "id": "P08",
+    "question": "For how many years is the T200 covered by warranty?",
+    "difficulty": "easy",
+    "type": "paraphrase",
+    "paraphrase_of": "E12",
+    "source": "manual",
+    "page": [
+      0,
+      1
+    ],
+    "key_fact": "3 years"
+  },
+  {
+    "id": "P09",
+    "question": "How do I wipe the T200 back to factory settings?",
+    "difficulty": "easy",
+    "type": "paraphrase",
+    "paraphrase_of": "E15",
+    "source": "manual",
+    "page": [
+      1
+    ],
+    "key_fact": "20 seconds"
+  },
+  {
+    "id": "P10",
+    "question": "Who runs Brightwave as chief executive?",
+    "difficulty": "easy",
+    "type": "paraphrase",
+    "paraphrase_of": "E16",
+    "source": "report",
+    "page": [
+      0
+    ],
+    "key_fact": "Maria Okafor"
+  },
+  {
+    "id": "P11",
+    "question": "How much of the 2025 revenue was generated in North America?",
+    "difficulty": "easy",
+    "type": "paraphrase",
+    "paraphrase_of": "E19",
+    "source": "report",
+    "page": [
+      0
+    ],
+    "key_fact": "62%"
+  },
+  {
+    "id": "P12",
+    "question": "Is it allowed to copy client data onto a personal flash drive?",
+    "difficulty": "hard",
+    "type": "paraphrase",
+    "paraphrase_of": "H05",
+    "source": "handbook",
+    "page": [
+      1
+    ],
+    "key_fact": "no; prohibited"
+  },
+  {
+    "id": "P13",
+    "question": "Will Aura repair my thermostat under warranty if a surge fried it?",
+    "difficulty": "hard",
+    "type": "paraphrase",
+    "paraphrase_of": "H08",
+    "source": "manual",
+    "page": [
+      1
+    ],
+    "key_fact": "no; surges not covered"
+  },
+  {
+    "id": "P14",
+    "question": "The T200 won't join my 5GHz Wi-Fi. Why, and will a future model support it?",
+    "difficulty": "hard",
+    "type": "paraphrase",
+    "paraphrase_of": "H09",
+    "source": "manual+report",
+    "page": [
+      0,
+      0
+    ],
+    "key_fact": "T200 is 2.4 GHz only; T300 adds 5 GHz"
+  },
+  {
+    "id": "P15",
+    "question": "How many points higher does customer support satisfaction have to go to reach the 2026 goal?",
+    "difficulty": "hard",
+    "type": "paraphrase",
+    "paraphrase_of": "H13",
+    "source": "report",
+    "page": [
+      1
+    ],
+    "key_fact": "3 points (91% -> 94%)"
+  }
+]
