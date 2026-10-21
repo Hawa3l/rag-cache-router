@@ -1,6 +1,6 @@
 import sqlite3
 from datetime import datetime
-from config import PRICES
+from config import PRICES,BASE_DIR
 
 DB_PATH = "logs.db"
 

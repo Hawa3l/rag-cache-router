@@ -1,0 +1,142 @@
+[
+    {
+        "original": "How many paid sick days do employees receive per calendar year?",
+        "paraphrase": "Per year, how many days of paid sick leave do I get?",
+        "answer": "10 days",
+        "near_miss": "How many paid vacation days do employees receive per year?",
+        "near_miss_answer": "20 days"
+    },
+    {
+        "original": "My T200 was damaged by a power surge. Is it covered by the warranty?",
+        "paraphrase": "Will Aura repair my thermostat under warranty if a surge fried it?",
+        "answer": "no; surges not covered",
+        "near_miss": "My T200 has a manufacturing defect after two years. Is it covered by the warranty?",
+        "near_miss_answer": "yes; defects covered for 3 years"
+    },
+    {
+        "original": "What are the core working hours at Brightwave?",
+        "paraphrase": "During which hours do employees need to be reachable?",
+        "answer": "10:00 to 15:00",
+        "near_miss": "What are the phone support hours for the T200?",
+        "near_miss_answer": "Mon-Fri 9:00 to 18:00"
+    },
+    {
+        "original": "How often must passwords be rotated?",
+        "paraphrase": "How frequently do I have to change my password?",
+        "answer": "180 days",
+        "near_miss": "How long must a password be?",
+        "near_miss_answer": "at least 14 characters"
+    },
+    {
+        "original": "How many hours do employees have to report a security incident?",
+        "paraphrase": "After finding a security problem, how quickly must I report it?",
+        "answer": "2 hours",
+        "near_miss": "How many days do I have to submit an expense report after a trip?",
+        "near_miss_answer": "30 days"
+    },
+    {
+        "original": "What does error E04 mean on the T200?",
+        "paraphrase": "My thermostat is showing E04, what's going on?",
+        "answer": "Wi-Fi connection lost",
+        "near_miss": "What does error E12 mean on the T200?",
+        "near_miss_answer": "wiring fault (usually missing C-wire)"
+    },
+    {
+        "original": "How long is the warranty on the AuraTemp T200?",
+        "paraphrase": "For how many years is the T200 covered by warranty?",
+        "answer": "3 years",
+        "near_miss": "How long do replacement units take to ship under the T200 warranty?",
+        "near_miss_answer": "5 business days"
+    },
+    {
+        "original": "How long should you hold the ring to factory reset the T200?",
+        "paraphrase": "How do I wipe the T200 back to factory settings?",
+        "answer": "hold ring 20 seconds",
+        "near_miss": "How long should you hold the ring to reconnect the T200 after error E04?",
+        "near_miss_answer": "10 seconds"
+    },
+    {
+        "original": "Who is the CEO of Brightwave Technologies?",
+        "paraphrase": "Who runs Brightwave as chief executive?",
+        "answer": "Maria Okafor",
+        "near_miss": "Who is the CFO of Brightwave Technologies?",
+        "near_miss_answer": "Daniel Reyes"
+    },
+    {
+        "original": "What share of 2025 revenue came from North America?",
+        "paraphrase": "What percentage of 2025 sales did North America account for?",
+        "answer": "62%",
+        "near_miss": "What share of 2025 revenue came from Europe?",
+        "near_miss_answer": "25%"
+    },
+    {
+        "original": "How long is parental leave for the primary caregiver?",
+        "paraphrase": "How many weeks off does the main caregiver get when a baby arrives?",
+        "answer": "16 weeks",
+        "near_miss": "How long is parental leave for the secondary caregiver?",
+        "near_miss_answer": "6 weeks"
+    },
+    {
+        "original": "Can I store customer data on my own USB drive if I encrypt it?",
+        "paraphrase": "Is it allowed to copy client data onto a personal flash drive?",
+        "answer": "no; prohibited",
+        "near_miss": "Can I access company email on my personal phone?",
+        "near_miss_answer": "yes, only via the managed mobile app"
+    },
+    {
+        "original": "Why can't my T200 connect to my 5 GHz network, and is any product planned to fix that?",
+        "paraphrase": "The T200 won't join my 5GHz Wi-Fi. Why, and will a future model support it?",
+        "answer": "T200 is 2.4 GHz only; T300 adds 5 GHz",
+        "near_miss": "Does the T200 have a built-in air-quality sensor?",
+        "near_miss_answer": "no; planned for the T300"
+    },
+    {
+        "original": "By how many percentage points does support satisfaction need to rise to hit the 2026 target?",
+        "paraphrase": "How many points higher does customer support satisfaction have to go to reach the 2026 goal?",
+        "answer": "3 points (91% -> 94%)",
+        "near_miss": "By how many percentage points did support satisfaction rise between 2024 and 2025?",
+        "near_miss_answer": "5 points (86% -> 91%)"
+    },
+    {
+        "original": "What was Brightwave's revenue in 2025?",
+        "paraphrase": "How much money did Brightwave bring in during 2025?",
+        "answer": "$264 million",
+        "near_miss": "What was Brightwave's revenue in 2024?",
+        "near_miss_answer": "$212 million"
+    },
+    {
+        "original": "How many days per week can employees work remotely?",
+        "paraphrase": "What's the maximum number of work-from-home days each week?",
+        "answer": "3 days",
+        "near_miss": "How much is the home office stipend for remote workers?",
+        "near_miss_answer": "$600"
+    },
+    {
+        "original": "What is the nightly hotel reimbursement limit in standard cities?",
+        "paraphrase": "How much will the company pay per night for a hotel in an ordinary city?",
+        "answer": "$180",
+        "near_miss": "What is the nightly hotel reimbursement limit in Tier-1 cities like London?",
+        "near_miss_answer": "$260"
+    },
+    {
+        "original": "How much does Eco mode reduce heating and cooling costs?",
+        "paraphrase": "By roughly what percent can I cut my energy bills with the T200's Eco setting?",
+        "answer": "about 12%",
+        "near_miss": "How many degrees does Eco mode widen the temperature range?",
+        "near_miss_answer": "4 degrees"
+    },
+    {
+        "original": "What temperature does the T200 use overnight by default?",
+        "paraphrase": "By default, how low does the thermostat set itself at night?",
+        "answer": "66F",
+        "near_miss": "What temperature does the T200 use during the day by default?",
+        "near_miss_answer": "72F"
+    },
+    {
+        "original": "How many unused vacation days can be carried over to the next year?",
+        "paraphrase": "What's the cap on rolling over leftover PTO?",
+        "answer": "5 days (expire Mar 31)",
+        "near_miss": "How many vacation days does an employee get from their fifth year onward?",
+        "near_miss_answer": "25 days"
+    }
+]
