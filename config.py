@@ -1,6 +1,6 @@
 from pathlib import Path
 
-LARGE_MODEL = "nvidia/nemotron-3-super-120b-a12b:free"
+LARGE_MODEL = "gemini-3.8-flash"
 SMALL_MODEL = "liquid/lfm-2.5-2.6b:free"
 PRICES = {
     LARGE_MODEL : (0.085, 0.40),
@@ -8,5 +8,5 @@ PRICES = {
 }
 K = 3
 MAX_TOKENS = 50000
-SIMILARITY_THRESHOLD = 0.9
+SIMILARITY_THRESHOLD = 0.3
 BASE_DIR = Path(__file__).parent

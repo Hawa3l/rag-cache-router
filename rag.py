@@ -1,22 +1,26 @@
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.document_loaders import PyPDFLoader
+from chromadb.utils import embedding_functions
 import chromadb
 import os
 from dotenv import load_dotenv
 from pathlib import Path
 from openai import OpenAI
-from config import K,MAX_TOKENS
+from config import K,MAX_TOKENS,LARGE_MODEL
 
 load_dotenv()
 client = chromadb.PersistentClient(path="./data/")
 
 client_llm = OpenAI(
-    base_url="https://openrouter.ai/api/v1",
-    api_key=os.getenv("OPENROUTER_API_KEY"),
+    base_url="https://generativelanguage.googleapis.com/v1beta/openai/",
+    api_key=os.getenv("GEMINI_KEY"),
 )
 collection = client.get_or_create_collection(
         name="test_collection",
-        metadata={"hnsw:space": "cosine"},   
+        metadata={"hnsw:space": "cosine"},  
+        embedding_function= embedding_functions.SentenceTransformerEmbeddingFunction(
+                model_name="BAAI/bge-base-en-v1.5"
+        )
 )
 
 def load_files(path):
@@ -48,7 +52,7 @@ def retrieve(question):
     return results["documents"][0]
 
 
-def generate(question,chunks,model_name="nvidia/nemotron-3-super-120b-a12b:free"):
+def generate(question,chunks,model_name=LARGE_MODEL):
     context ="\n\n---\n\n".join(chunks)
     prompt = (
         "Answer the question using only the context below. "

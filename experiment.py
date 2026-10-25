@@ -1,10 +1,10 @@
 import json
 import time
 from pathlib import Path
-
+import re
 import numpy as np
-from sentence_transformers import SentenceTransformer
-
+from sentence_transformers import SentenceTransformer,CrossEncoder
+np.set_printoptions(suppress=True, precision=3)
 models = [
     "sentence-transformers/all-MiniLM-L6-v2",
     "sentence-transformers/paraphrase-MiniLM-L6-v2",
@@ -13,7 +13,8 @@ models = [
     "BAAI/bge-small-en-v1.5",
     "BAAI/bge-base-en-v1.5",
 ]
-
+_ce = CrossEncoder("cross-encoder/quora-distilroberta-base")
+CE_CUTOFF = 0.25
 DATA_FILE = Path(__file__).parent / "cache_test_questions.json"
 with open(DATA_FILE, "r", encoding="utf-8") as f:
     questions = json.load(f)
@@ -35,15 +36,53 @@ def evaluate(model_name):
 
     para_sims = np.diag(orig_emb @ para_emb.T)
     near_sims = np.diag(orig_emb @ near_emb.T)
-
-
     orig_sims = orig_emb @ orig_emb.T
+
+
     np.fill_diagonal(orig_sims, -1)              
 
     return para_sims, near_sims, orig_sims, elapsed
 
 
+def evaluate_crossencoder():
+    model = CrossEncoder("cross-encoder/quora-distilroberta-base")
+
+    start = time.perf_counter()
+    para_sims = _ce.predict([(originals[i],paraphrases[i]) for i in range(N)])
+    near_sims = _ce.predict([(originals[i],near_misses[i]) for i in range(N)])
+    originals_other_originals = []
+    for i in range(N-1):
+        j = i+1
+        originals_other_originals.append((originals[i],originals[j])) 
+    orig_sims = _ce.predict(originals_other_originals)
+    elapsed = time.perf_counter() - start
+
+
+    return para_sims,near_sims,orig_sims,elapsed
+
+def extract_tokens(q):
+    return set(re.findall(r"\b[a-z]*\d+(?:\.\d+)?[a-z]*\b", q.lower()))
+
+def numbers_guard(q1, q2):
+    return extract_tokens(q1) == extract_tokens(q2)
+
+def cross_encoder_score(q1, q2):
+    return float(_ce.predict([(q1, q2)])[0])
+
+def verify(q1, q2):
+    return numbers_guard(q1, q2) and cross_encoder_score(q1, q2) >= CE_CUTOFF
+
 if __name__ == "__main__":
+    res_1 = []
+    res_2 = []
+    for i in range(N):
+        res_1.append(verify(originals[i],paraphrases[i]))
+        res_2.append(verify(originals[i],near_misses[i]))
+
+    print(f"res 1 : {res_1.count(True)}")
+    print(f"res 2 : {res_2}")
+    
+    
     results = []
     thresholds = np.arange(0.40, 1.00, 0.01)
 
