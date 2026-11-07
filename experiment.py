@@ -4,6 +4,7 @@ from pathlib import Path
 import re
 import numpy as np
 from sentence_transformers import SentenceTransformer,CrossEncoder
+from config import CE_CUTOFF
 np.set_printoptions(suppress=True, precision=3)
 models = [
     "sentence-transformers/all-MiniLM-L6-v2",
@@ -14,10 +15,13 @@ models = [
     "BAAI/bge-base-en-v1.5",
 ]
 _ce = CrossEncoder("cross-encoder/quora-distilroberta-base")
-CE_CUTOFF = 0.25
 DATA_FILE = Path(__file__).parent / "cache_test_questions.json"
+QUESTIONS_FILE = Path(__file__).parent / "questions.json"
 with open(DATA_FILE, "r", encoding="utf-8") as f:
     questions = json.load(f)
+
+with open(QUESTIONS_FILE, "r", encoding="utf-8") as f:
+    questions2 = json.load(f)
 
 originals   = [q["original"]   for q in questions]
 paraphrases = [q["paraphrase"] for q in questions]
@@ -25,54 +29,8 @@ near_misses = [q["near_miss"]  for q in questions]
 N = len(questions)
 
 
-def evaluate(model_name):
-    model = SentenceTransformer(model_name)      
 
-    start = time.perf_counter()
-    orig_emb = model.encode(originals,   normalize_embeddings=True)
-    para_emb = model.encode(paraphrases, normalize_embeddings=True)
-    near_emb = model.encode(near_misses, normalize_embeddings=True)
-    elapsed = time.perf_counter() - start
-
-    para_sims = np.diag(orig_emb @ para_emb.T)
-    near_sims = np.diag(orig_emb @ near_emb.T)
-    orig_sims = orig_emb @ orig_emb.T
-
-
-    np.fill_diagonal(orig_sims, -1)              
-
-    return para_sims, near_sims, orig_sims, elapsed
-
-
-def evaluate_crossencoder():
-    model = CrossEncoder("cross-encoder/quora-distilroberta-base")
-
-    start = time.perf_counter()
-    para_sims = _ce.predict([(originals[i],paraphrases[i]) for i in range(N)])
-    near_sims = _ce.predict([(originals[i],near_misses[i]) for i in range(N)])
-    originals_other_originals = []
-    for i in range(N-1):
-        j = i+1
-        originals_other_originals.append((originals[i],originals[j])) 
-    orig_sims = _ce.predict(originals_other_originals)
-    elapsed = time.perf_counter() - start
-
-
-    return para_sims,near_sims,orig_sims,elapsed
-
-def extract_tokens(q):
-    return set(re.findall(r"\b[a-z]*\d+(?:\.\d+)?[a-z]*\b", q.lower()))
-
-def numbers_guard(q1, q2):
-    return extract_tokens(q1) == extract_tokens(q2)
-
-def cross_encoder_score(q1, q2):
-    return float(_ce.predict([(q1, q2)])[0])
-
-def verify(q1, q2):
-    return numbers_guard(q1, q2) and cross_encoder_score(q1, q2) >= CE_CUTOFF
-
-if __name__ == "__main__":
+def benchmark():
     res_1 = []
     res_2 = []
     for i in range(N):
@@ -130,3 +88,66 @@ if __name__ == "__main__":
     print("Highest-scoring near-misses (should be low):")
     for i in np.argsort(best["near"])[::-1][:3]:
         print(f"  {best['near'][i]:.2f}  {originals[i]}  |  {near_misses[i]}")
+
+
+def test_crossencoder(list):
+    res = _ce.predict(list)
+    return res
+
+
+def evaluate(model_name):
+    model = SentenceTransformer(model_name)      
+
+    start = time.perf_counter()
+    orig_emb = model.encode(originals,   normalize_embeddings=True)
+    para_emb = model.encode(paraphrases, normalize_embeddings=True)
+    near_emb = model.encode(near_misses, normalize_embeddings=True)
+    elapsed = time.perf_counter() - start
+
+    para_sims = np.diag(orig_emb @ para_emb.T)
+    near_sims = np.diag(orig_emb @ near_emb.T)
+    orig_sims = orig_emb @ orig_emb.T
+
+
+    np.fill_diagonal(orig_sims, -1)              
+
+    return para_sims, near_sims, orig_sims, elapsed
+
+
+def evaluate_crossencoder():
+
+    start = time.perf_counter()
+    para_sims = _ce.predict([(originals[i],paraphrases[i]) for i in range(N)])
+    near_sims = _ce.predict([(originals[i],near_misses[i]) for i in range(N)])
+    originals_other_originals = []
+    for i in range(N-1):
+        j = i+1
+        originals_other_originals.append((originals[i],originals[j])) 
+    orig_sims = _ce.predict(originals_other_originals)
+    elapsed = time.perf_counter() - start
+
+
+    return para_sims,near_sims,orig_sims,elapsed
+
+def extract_tokens(q):
+    return set(re.findall(r"\b[a-z]*\d+(?:\.\d+)?[a-z]*\b", q.lower()))
+
+def numbers_guard(q1, q2):
+    return extract_tokens(q1) == extract_tokens(q2)
+
+def cross_encoder_score(q1, q2):
+    return float(_ce.predict([(q1, q2)])[0])
+
+def verify(q1, q2):
+    return numbers_guard(q1, q2) and cross_encoder_score(q1, q2) >= CE_CUTOFF
+
+if __name__ == "__main__":
+    l = []
+    for q in questions2 : 
+        if q["near_miss_of"] is not None :
+            for p in questions2 :
+                if q["near_miss_of"] == p["id"]:
+                    l.append((q["question"],p["question"]))
+
+    print(l)
+    print(test_crossencoder(l))
